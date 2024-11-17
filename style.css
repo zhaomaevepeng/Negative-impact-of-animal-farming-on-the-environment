@@ -1,0 +1,265 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  padding: 1rem;
+  color: #1d1d20;
+  line-height: 1.5em;
+}
+body a {
+  color: #8dbeef;
+  font-style: italic;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+body a:visited {
+  color: #96c3f0;
+}
+body a:hover {
+  color: #29292d;
+}
+body a:active {
+  color: #7bb4ec;
+}
+body img {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+nav ul {
+  margin: 0;
+  width: 100%;
+  padding: 0 3em;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  background: #fff;
+  box-shadow: 0 8px 15px -10px rgba(0, 0, 0, 0.3);
+}
+nav li {
+  display: inline-flex;
+}
+nav a {
+  width: 100%;
+  text-decoration: none;
+  padding: 0.8em 1em 0.4em;
+}
+nav a:hover {
+  color: #1d1d20;
+  border-bottom: 2px solid #1d1d20;
+}
+
+.active a {
+  color: #7bb4ec;
+  border-bottom: 2px solid #7bb4ec;
+}
+
+.btn {
+  display: inline-block;
+  color: #8dbeef;
+  padding: 0.5em 1em;
+  border: 2px solid #8dbeef;
+}
+
+.segment-title {
+  padding-bottom: 1em;
+  margin: 2em 0;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px -20px rgba(0, 0, 0, 0.1);
+}
+.segment-title h2 {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 0.6em;
+  padding-bottom: 1.4em;
+  position: relative;
+}
+.segment-title h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #1d1d20;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+blockquote {
+  margin: 2em;
+  background: #fafafa;
+  border-left: 3px solid #8dbeef;
+  border-radius: 5px;
+  padding: 1em 2em;
+  quotes: "“" "”" "‘" "’";
+  box-shadow: 0 8px 15px -10px rgba(0, 0, 0, 0.3);
+}
+
+blockquote:before {
+  color: #8dbeef;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #8dbeef;
+  content: close-quote;
+}
+
+blockquote p {
+  display: inline;
+}
+
+article {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+article section {
+  padding: 0 3em;
+  display: block;
+  width: 100%;
+}
+article section:focus {
+  box-shadow: 0 0 25px -5px #8dbeef;
+  outline: none;
+}
+article sectionafter {
+  content: "";
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+article .grid-1-3, article .grid-2-3 {
+  display: inline-block;
+  vertical-align: middle;
+}
+article .grid-1-3 {
+  width: 33%;
+}
+article .grid-2-3 {
+  width: 66%;
+}
+@media (max-width: 600px) {
+  article {
+    padding: 1em 0;
+    flex-flow: column wrap;
+  }
+  article .grid-1-3, article .grid-2-3 {
+    width: 100%;
+  }
+}
+
+.center {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #666670;
+}
+.flex small {
+  font-size: 0.6rem;
+}
+.flex img {
+  width: 5em;
+}
+.flex span {
+  display: inline-block;
+}
+.flex em {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  min-height: 80vh;
+  padding-top: 3em;
+  transition: all 0.3s ease-out;
+}
+@media (max-width: 600px) {
+  .chart-container {
+    min-height: 50vh;
+  }
+}
+
+#references .segment-title {
+  padding: 0 2rem;
+  padding-bottom: 4rem !important;
+}
+#references p {
+  margin: 0.1em;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+#references h4 {
+  margin-top: 3em;
+  border-bottom: 2px solid #1d1d20;
+}
+
+footer {
+  width: 100%;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #666670;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
